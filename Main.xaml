@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1049,2551" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/word" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1049,5353" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/word" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -120,7 +120,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="RPA-J-02 | Job Posting for Talent Sourcing&#xA;&#xA;Industry Challenge: Automating job postings across job portals&#xA;&#xA;Talents engage across multiple platforms and job portals. Many organisations are becoming very careful in the way they are hiring and recruiting especially during COVID times. Certain organisations need talents in a timely manner and manually posting the same job descriptions across multiple sites can be a tedious and mundane task." DisplayName="CV Matching Workflow" sap:VirtualizedContainerService.HintSize="478,2386" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="RPA-J-02 | Job Posting for Talent Sourcing&#xA;&#xA;Industry Challenge: Automating job postings across job portals&#xA;&#xA;Talents engage across multiple platforms and job portals. Many organisations are becoming very careful in the way they are hiring and recruiting especially during COVID times. Certain organisations need talents in a timely manner and manually posting the same job descriptions across multiple sites can be a tedious and mundane task." DisplayName="CV Matching Workflow" sap:VirtualizedContainerService.HintSize="798,5188" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sc:IEnumerable" Name="paths" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List (of String)]" Name="educationCollection_Keyword" />
@@ -140,9 +140,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,638" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="756,638" sap2010:WorkflowViewState.IdRef="CommentOut_23">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,560" sap2010:WorkflowViewState.IdRef="Sequence_96">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,560" sap2010:WorkflowViewState.IdRef="Sequence_105">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,9 +612,9 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,533" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="756,533" sap2010:WorkflowViewState.IdRef="CommentOut_24">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,455" sap2010:WorkflowViewState.IdRef="Sequence_92">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,455" sap2010:WorkflowViewState.IdRef="Sequence_106">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -632,7 +632,7 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange AddHeaders="True" DataTable="[keywordJobSearchDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="636,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="keyword JD" WorkbookPath="KeywordLibrary.xlsx">
+            <ui:ReadRange AddHeaders="True" DataTable="[keywordJobSearchDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="keyword JD" WorkbookPath="KeywordLibrary.xlsx">
               <ui:ReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -645,7 +645,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadRange>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Jobs in Singapore - Search Job Vacancies - Career | JobStreet" sap:VirtualizedContainerService.HintSize="636,3350" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Jobs in Singapore - Search Job Vacancies - Career | JobStreet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -711,7 +711,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NExtractData sap2010:Annotation.AnnotationText="Extract Table Data using:&#xA;&#xA;&lt;webctrl id='jobList' tag='DIV' /&gt;" AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,223" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="5">
+                            <uix:NExtractData sap2010:Annotation.AnnotationText="Extract Table Data using:&#xA;&#xA;&lt;webctrl id='jobList' tag='DIV' /&gt;" AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,223" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="10">
                               <uix:NExtractData.Target>
                                 <uix:TargetAnchorable DesignTimeRectangle="238, 289, 439, 8784" ElementType="InputBox" FriendlyName="'DIV jobList'" FullSelectorArgument="&lt;webctrl id='jobList' tag='DIV' /&gt;" InformativeScreenshot="490b6d68d990109dd58622df35b4bd61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
                               </uix:NExtractData.Target>
@@ -839,7 +839,7 @@
               </uix:NApplicationCard.TargetApp>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -848,9 +848,9 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,488" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="756,488" sap2010:WorkflowViewState.IdRef="CommentOut_25">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,410" sap2010:WorkflowViewState.IdRef="Sequence_97">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,410" sap2010:WorkflowViewState.IdRef="Sequence_107">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1195,98 +1195,277 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,368" sap2010:WorkflowViewState.IdRef="CommentOut_22">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,290" sap2010:WorkflowViewState.IdRef="Sequence_104">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="This State 4 matches CV and JD skills and populate from column E onwards. Education and Skills keyword in the CV are compared with the JD to derive the percentage match as well as education requirement" DisplayName="State 4 - Matching of CV and JD  " sap:VirtualizedContainerService.HintSize="200,198" sap2010:WorkflowViewState.IdRef="Sequence_85">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="cv_s4_DT" />
-              <Variable x:TypeArguments="sd:DataTable" Name="jd_s4_DT" />
-              <Variable x:TypeArguments="x:Int32" Default="0" Name="skillsMatchCount" />
-              <Variable x:TypeArguments="x:Int32" Name="index_jds4DT" />
-              <Variable x:TypeArguments="x:String" Default="Not met" Name="eduResult" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Starting State 4...&quot;]">
+    <Sequence sap2010:Annotation.AnnotationText="This State 4 matches CV and JD skills and populate from column E onwards. Education and Skills keyword in the CV are compared with the JD to derive the percentage match as well as education requirement" DisplayName="State 4 - Matching of CV and JD  " sap:VirtualizedContainerService.HintSize="756,3200" sap2010:WorkflowViewState.IdRef="Sequence_85">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="cv_s4_DT" />
+        <Variable x:TypeArguments="sd:DataTable" Name="jd_s4_DT" />
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="skillsMatchCount" />
+        <Variable x:TypeArguments="x:Int32" Name="index_jds4DT" />
+        <Variable x:TypeArguments="x:String" Default="Not met" Name="eduResult" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="714,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Starting State 4...&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet CandidateMatching and output it to cv_s4_DT&#xA;" DataTable="[cv_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,144" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="CandidateMatching" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
+        <ui:ReadRange.Range>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:ReadRange.Range>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet JDMatching and output it to jd_s4_DT&#xA;" DataTable="[jd_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,144" sap2010:WorkflowViewState.IdRef="ReadRange_8" SheetName="JDMatching" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
+        <ui:ReadRange.Range>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:ReadRange.Range>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Cycle through the jd_s4_DT Datatable" CurrentIndex="[index_jds4DT]" DataTable="[jd_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="714,2434" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="680,2283" sap2010:WorkflowViewState.IdRef="Sequence_88">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="jdSkillsReq" />
+                <Variable x:TypeArguments="s:String[]" Name="jdSkillsReqCollection" />
+                <Variable x:TypeArguments="x:Int32" Name="skillsJD_Total" />
+                <Variable x:TypeArguments="x:Int32" Name="index_cvs4DT" />
+                <Variable x:TypeArguments="x:String" Name="jdEduReq" />
+                <Variable x:TypeArguments="s:String[]" Name="jdEduReqCollection" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:LogMessage>
-            <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet CandidateMatching and output it to cv_s4_DT&#xA;" DataTable="[cv_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="CandidateMatching" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:ReadRange>
-            <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet JDMatching and output it to jd_s4_DT&#xA;" DataTable="[jd_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="ReadRange_8" SheetName="JDMatching" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:ReadRange>
-            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Cycle through the jd_s4_DT Datatable" CurrentIndex="[index_jds4DT]" DataTable="[jd_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,829" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,678" sap2010:WorkflowViewState.IdRef="Sequence_88">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="jdSkillsReq" />
-                      <Variable x:TypeArguments="s:String[]" Name="jdSkillsReqCollection" />
-                      <Variable x:TypeArguments="x:Int32" Name="skillsJD_Total" />
-                      <Variable x:TypeArguments="x:Int32" Name="index_cvs4DT" />
-                      <Variable x:TypeArguments="x:String" Name="jdEduReq" />
-                      <Variable x:TypeArguments="s:String[]" Name="jdEduReqCollection" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:AddDataColumn x:TypeArguments="x:String" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="[CurrentRow(0).ToString]" DataTable="[cv_s4_DT]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12" MaxLength="999" Unique="False" />
-                    <Sequence sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String then convert it into an Array" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_99">
+              <ui:AddDataColumn x:TypeArguments="x:String" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="[CurrentRow(0).ToString]" DataTable="[cv_s4_DT]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12" MaxLength="999" Unique="False" />
+              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String then convert it into an Array" sap:VirtualizedContainerService.HintSize="638,138" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_50">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[jdEduReq]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[CurrentRow("Education Requirement").ToString]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <Assign sap2010:Annotation.AnnotationText="Convert the JD as String into an Array" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_51">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:String[]">[jdEduReqCollection]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:String[]">[jdEduReq.Split(","c)]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String&#xA;Convert the JD as String into an Array&#xA;Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="638,183" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_40">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[jdSkillsReq]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[CurrentRow("Skills Requirement").ToString]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <Assign sap2010:Annotation.AnnotationText="Convert the JD as String into an Array" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_41">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:String[]">[jdSkillsReqCollection]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:String[]">[jdSkillsReq.Split(","c)]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <Assign sap2010:Annotation.AnnotationText="Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_42">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[skillsJD_Total]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[jdSkillsReqCollection.Count]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+              </Sequence>
+              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Go through each CV and begin the matching process and recording into the datatable cv_s4_DT" CurrentIndex="[index_cvs4DT]" DataTable="[cv_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,1728" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1577" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Double" Name="percentageMatch" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_50">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV education with JD education and result in either &quot;Met&quot; or &quot;Not Met&quot; in the eduResult variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,735" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[jdEduReqCollection]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="education" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,559" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Boolean" Name="IsEduMet" />
+                                <Variable x:TypeArguments="x:String" Name="educationPattern" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_56">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[educationPattern]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[".*" + education.ToString + ".*"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:IsMatch BuilderPattern=".* bachelor|degree|diploma.*" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[CurrentRow(&quot;Education List&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;.* bachelor|degree|diploma.*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[educationPattern]" RegexOption="IgnoreCase" Result="[IsEduMet]" />
+                              <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[IsEduMet]" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="If_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_55">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[eduResult]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">Met</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </If.Then>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ForEach>
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV skills with JD skills and count the number of matches into the skillsMatchCount variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,123" sap2010:WorkflowViewState.IdRef="ForEach`1_21" Values="[jdSkillsReqCollection]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="skill" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,360" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[CurrentRow(&quot;Skills List&quot;).ToString.Contains(skill.ToString)]" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="If_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_43">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[skillsMatchCount]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[skillsMatchCount + 1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </If.Then>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ForEach>
+                      <Assign sap2010:Annotation.AnnotationText="Assign percentageMatch variable with the result of skillsMatchCount divided by skillsJD_Total&#xA;" sap:VirtualizedContainerService.HintSize="562,132" sap2010:WorkflowViewState.IdRef="Assign_49">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[jdEduReq]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Double">[percentageMatch]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[CurrentRow("Education Requirement").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:Double">[math.Round(skillsMatchCount/skillsJD_Total * 100,2)]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1294,12 +1473,38 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <Assign sap2010:Annotation.AnnotationText="Convert the JD as String into an Array" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_51">
+                      <Assign sap2010:Annotation.AnnotationText="Write the percentageMatch into the cv_s4_DT Datatable" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_46">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="s:String[]">[jdEduReqCollection]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Object">[cv_s4_DT.Rows(index_cvs4DT).Item(index_jds4DT + 4)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="s:String[]">[jdEduReq.Split(","c)]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[percentageMatch.ToString +"% matched" + vbNewLine + vbNewLine + "Education :" + eduResult]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <Assign sap2010:Annotation.AnnotationText="reset the variable to default value" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="Assign_53">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[eduResult]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">Not met</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <Assign sap2010:Annotation.AnnotationText="reset the skillsMatchCount to 0 for the next JD entries" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_48">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[skillsMatchCount]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1308,242 +1513,34 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String&#xA;Convert the JD as String into an Array&#xA;Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_98">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_40">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[jdSkillsReq]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[CurrentRow("Skills Requirement").ToString]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <Assign sap2010:Annotation.AnnotationText="Convert the JD as String into an Array" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_41">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="s:String[]">[jdSkillsReqCollection]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="s:String[]">[jdSkillsReq.Split(","c)]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <Assign sap2010:Annotation.AnnotationText="Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_42">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Int32">[skillsJD_Total]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Int32">[jdSkillsReqCollection.Count]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                    </Sequence>
-                    <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Go through each CV and begin the matching process and recording into the datatable cv_s4_DT" CurrentIndex="[index_cvs4DT]" DataTable="[cv_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
-                      <ui:ForEachRow.Body>
-                        <ActivityAction x:TypeArguments="sd:DataRow">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,965" sap2010:WorkflowViewState.IdRef="Sequence_89">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:Double" Name="percentageMatch" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV education with JD education and result in either &quot;Met&quot; or &quot;Not Met&quot; in the eduResult variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="262,123" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[jdEduReqCollection]">
-                              <ui:ForEach.Body>
-                                <ActivityAction x:TypeArguments="x:Object">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="x:Object" Name="education" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,590" sap2010:WorkflowViewState.IdRef="Sequence_100">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:Boolean" Name="IsEduMet" />
-                                    </Sequence.Variables>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:IsMatch BuilderPattern="bachelor.*" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[CurrentRow(&quot;Education List&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;bachelor&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null},{&quot;Index&quot;:1,&quot;OperationID&quot;:&quot;ANYTHING&quot;,&quot;OperationName&quot;:&quot;Anything&quot;,&quot;OperationValue&quot;:&quot;.&quot;,&quot;QuantifierFirstValue&quot;:&quot;*&quot;,&quot;QuantifierID&quot;:&quot;ANY&quot;,&quot;QuantifierName&quot;:&quot;Any (0 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="bachelor.*" RegexOption="IgnoreCase" Result="[IsEduMet]" />
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[IsEduMet]" />
-                                    <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[IsEduMet]" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="If_19">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <If.Then>
-                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_55">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[eduResult]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">Met</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </If.Then>
-                                    </If>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEach.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:ForEach>
-                            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV skills with JD skills and count the number of matches into the skillsMatchCount variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="262,123" sap2010:WorkflowViewState.IdRef="ForEach`1_21" Values="[jdSkillsReqCollection]">
-                              <ui:ForEach.Body>
-                                <ActivityAction x:TypeArguments="x:Object">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="x:Object" Name="skill" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,360" sap2010:WorkflowViewState.IdRef="Sequence_90">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[CurrentRow(&quot;Skills List&quot;).ToString.Contains(skill.ToString)]" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="If_18">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <If.Then>
-                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_43">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[skillsMatchCount]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[skillsMatchCount + 1]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </If.Then>
-                                    </If>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEach.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:ForEach>
-                            <Assign sap2010:Annotation.AnnotationText="Assign percentageMatch variable with the result of skillsMatchCount divided by skillsJD_Total&#xA;" sap:VirtualizedContainerService.HintSize="262,132" sap2010:WorkflowViewState.IdRef="Assign_49">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Double">[percentageMatch]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Double">[math.Round(skillsMatchCount/skillsJD_Total * 100,2)]</InArgument>
-                              </Assign.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="Write the percentageMatch into the cv_s4_DT Datatable" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_46">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Object">[cv_s4_DT.Rows(index_cvs4DT).Item(index_jds4DT + 4)]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">[percentageMatch.ToString +"% matched" + vbNewLine + vbNewLine + "Education :" + eduResult]</InArgument>
-                              </Assign.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="reset the variable to default value" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_53">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">[eduResult]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">Not met</InArgument>
-                              </Assign.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="reset the skillsMatchCount to 0 for the next JD entries" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_48">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[skillsMatchCount]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                              </Assign.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </Assign>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ForEachRow.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:ForEachRow>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:ForEachRow>
-            <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Write the Datatable back to matchingResult.xlsx" DataTable="[cv_s4_DT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="CandidateMatching" StartingCell="A1" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:WriteRange>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Write the Datatable back to matchingResult.xlsx" DataTable="[cv_s4_DT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="714,93" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="CandidateMatching" StartingCell="A1" WorkbookPath="[&quot;DocumentProcessing\Output_Folder\matchingResults &quot; + Now.ToString(&quot;dMMMyyyy&quot;) + &quot;.xlsx&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+    </Sequence>
   </Sequence>
 </Activity>
