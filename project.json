@@ -1,0 +1,62 @@
+{
+  "name": "RPA-J-01 Job matching for Placements",
+  "description": "Job placement is a major challenge faced by many organisations especially during COVID times. Potential hires may not be aware of openings and skills required even when job openings for roles increase by the day. Possible solutions include scraping multiple job portals for job descriptions and scanning CVs of trainees in Word/PDF format, and matching them.\r\n",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Printer.Activities": "[0.6.0]",
+    "System.Text.RegularExpressions": "[4.3.1]",
+    "UiPath.Abbyy.Activities": "[1.4.2]",
+    "UiPath.DocumentUnderstanding.ML.Activities": "[1.7.0]",
+    "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.IntelligentOCR.Activities": "[4.13.1]",
+    "UiPath.Mail.Activities": "[1.10.4]",
+    "UiPath.OmniPage.Activities": "[1.7.1]",
+    "UiPath.System.Activities": "[21.4.0]",
+    "UiPath.UIAutomation.Activities": "[21.4.3]",
+    "UiPath.Word.Activities": "[1.6.4]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.3.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "f6aa7a13-72a8-4cb4-9a15-90568b4f10d2",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
