@@ -4,10 +4,11 @@
   "main": "Main.xaml",
   "dependencies": {
     "Printer.Activities": "[0.6.0]",
-    "System.Text.RegularExpressions": "[4.3.1]",
+    "Symphony.Activities.Extension.SyForms": "[1.1.0]",
     "UiPath.Abbyy.Activities": "[1.4.2]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.7.0]",
     "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.Form.Activities": "[1.1.11]",
     "UiPath.IntelligentOCR.Activities": "[4.13.1]",
     "UiPath.Mail.Activities": "[1.10.4]",
     "UiPath.OmniPage.Activities": "[1.7.1]",

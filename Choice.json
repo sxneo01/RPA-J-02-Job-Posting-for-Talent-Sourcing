@@ -1,0 +1,63 @@
+{
+  "Type": "CustomForm",
+  "Name": "CustomForm",
+  "Text": "CustomForm",
+  "Width": 449,
+  "Size": "449, 506",
+  "Location": "0, 0",
+  "Font": "Microsoft Sans Serif, 8.25pt",
+  "BackColor": "Control",
+  "Controls": [
+    {
+      "Type": "CustomTextbox",
+      "Name": "CustomTextbox1",
+      "Text": "",
+      "Size": "100, 20",
+      "Location": "12, 26",
+      "Font": "Microsoft Sans Serif, 10pt",
+      "Multiline": false,
+      "BackColor": "Window",
+      "ExposeAsArgument": false,
+      "UseSystemPasswordChar": false
+    },
+    {
+      "Type": "CustomButton",
+      "Name": "CustomButton1",
+      "Text": "",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "Size": "75, 23",
+      "Location": "135, 29",
+      "WorkflowPath": null,
+      "BackColor": "Control",
+      "ExposeAsArgument": false,
+      "IsClosingForm": false
+    },
+    {
+      "Type": "CustomTextbox",
+      "Name": "CustomTextbox2",
+      "Text": "",
+      "Size": "100, 20",
+      "Location": "8, 67",
+      "Font": "Microsoft Sans Serif, 10pt",
+      "Multiline": false,
+      "BackColor": "Window",
+      "ExposeAsArgument": false,
+      "UseSystemPasswordChar": false
+    },
+    {
+      "Type": "CustomButton",
+      "Name": "CustomButton2",
+      "Text": "",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "Size": "75, 23",
+      "Location": "134, 69",
+      "WorkflowPath": null,
+      "BackColor": "Control",
+      "ExposeAsArgument": false,
+      "IsClosingForm": false
+    }
+  ],
+  "ShowInTaskbar": true,
+  "CanResize": true,
+  "OnLoadWorkflowPath": null
+}
