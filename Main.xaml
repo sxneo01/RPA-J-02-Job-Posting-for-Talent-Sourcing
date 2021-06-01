@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="920,11270" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1462,5546" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="140">
+    <scg:List x:TypeArguments="x:String" Capacity="71">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -75,7 +75,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="49">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -125,9 +125,10 @@
       <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
       <AssemblyReference>System.Windows.Forms</AssemblyReference>
       <AssemblyReference>Symphony.Extensions.SyForms</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="RPA-J-02 | Job Posting for Talent Sourcing&#xA;&#xA;Industry Challenge: Automating job postings across job portals&#xA;&#xA;Talents engage across multiple platforms and job portals. Many organisations are becoming very careful in the way they are hiring and recruiting especially during COVID times. Certain organisations need talents in a timely manner and manually posting the same job descriptions across multiple sites can be a tedious and mundane task." DisplayName="CV Matching Workflow" sap:VirtualizedContainerService.HintSize="839,18807" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="RPA-J-02 | Job Posting for Talent Sourcing&#xA;&#xA;Industry Challenge: Automating job postings across job portals&#xA;&#xA;Talents engage across multiple platforms and job portals. Many organisations are becoming very careful in the way they are hiring and recruiting especially during COVID times. Certain organisations need talents in a timely manner and manually posting the same job descriptions across multiple sites can be a tedious and mundane task." DisplayName="CV Matching Workflow" sap:VirtualizedContainerService.HintSize="526,2190" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sc:IEnumerable" Name="paths" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List (of String)]" Name="educationCollection_Keyword" />
@@ -144,7 +145,7 @@
       <Variable x:TypeArguments="x:String" Name="resultFileName" />
       <Variable x:TypeArguments="x:Int32" Name="maxRow">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="2" />
+          <Literal x:TypeArguments="x:Int32" Value="10" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="choice" />
@@ -155,41 +156,53 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="This State digitalize pdf documents and match occurence of keyword for education and skills category between the CVs and the keyword library.&#xA;&#xA;How to use:&#xA;&#xA;1. Put the CVs into the folder DocumentProcessing/Documents.&#xA;&#xA;2. Add or remove keyword in the KeywordLibrary.xlsx in accordance to your requirement.  &#xA;&#xA;(You can have a separate workflow to scrape keyword from job portal and populate this list too)&#xA;&#xA;3. Run the program and it will output a matching.xlsx that match number of occurence." DisplayName="State 1 - Scan and identify keyword in CVs" sap:VirtualizedContainerService.HintSize="797,7245" sap2010:WorkflowViewState.IdRef="Sequence_52">
+    <Sequence sap2010:Annotation.AnnotationText="This state ask the user to select the following option:&#xD;&#xA;&#xD;&#xA;1. Search job portals for JD and match with CV &#xD;&#xA;&#xD;&#xA;- this options allows user to key in keywords and scrape job portal for JDs before matching them&#xD;&#xA;&#xD;&#xA;2. Match CV with your existing JD&#xD;&#xA;&#xD;&#xA;- this options allows user to provide it's own JDs without  scraping job portals." DisplayName="Pre-State - User Option Selection" sap:VirtualizedContainerService.HintSize="484,351" sap2010:WorkflowViewState.IdRef="Sequence_112">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="755,291" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please select your options below:" Options="[{&quot;1. Search job portals for JD and match with CV&quot;, &quot;2. Match CV with your existing JD&quot;}]" Title="User search options">
+      <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="755,296" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="[&quot;1. Search job portals for JD and match with CV&quot; + vbNewLine +vbNewLine + &quot; - this option scrape job portal using user's entered keyword and match with CVs.&quot; + vbNewLine + vbNewLine  + &quot;2. Match CV With your existing JD &quot; + vbNewLine +vbNewLine + &quot; - this options allows user to provide it's own JDs without scraping job portals.&quot; + vbNewLine + vbNewLine +vbNewLine +vbNewLine + &quot;Please select your options below:&quot;]" Options="[{&quot;1. Search job portals for JD and match with CV&quot;, &quot;2. Match CV with your existing JD&quot;}]" Title="User's option">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:String">[choice]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
-      <If Condition="[choice = &quot;1. Search job portals for JD and match with CV&quot;]" sap:VirtualizedContainerService.HintSize="755,436" sap2010:WorkflowViewState.IdRef="If_21">
+      <ui:StartProcess Arguments="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\CVs_Folder\&quot;]" DisplayName="Start Process" FileName="explorer.exe" sap:VirtualizedContainerService.HintSize="755,87" sap2010:WorkflowViewState.IdRef="StartProcess_3" WorkingDirectory="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="755,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please upload the CVs into the CVs_Folder before clicking Ok&quot;]" />
+      <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="755,134" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="explorer" />
+      <If Condition="[choice = &quot;1. Search job portals for JD and match with CV&quot;]" sap:VirtualizedContainerService.HintSize="755,438" sap2010:WorkflowViewState.IdRef="If_23">
         <If.Then>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter the search keyword for the job portal" Title="User's input for keyword">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please enter the search keyword for the job portal" Title="User's input for keyword">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[keywordSearch]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </If.Then>
         <If.Else>
-          <Sequence sap:VirtualizedContainerService.HintSize="376,278" sap2010:WorkflowViewState.IdRef="Sequence_111">
+          <Sequence sap:VirtualizedContainerService.HintSize="376,278" sap2010:WorkflowViewState.IdRef="Sequence_120">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:StartProcess Arguments="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;]" DisplayName="Start Process" FileName="explorer.exe" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" WorkingDirectory="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Please upload your existing JD into the JDs_Folder before clicking Ok&quot;]" />
+            <ui:StartProcess Arguments="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;]" DisplayName="Start Process" FileName="explorer.exe" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="StartProcess_4" WorkingDirectory="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please upload your existing JD into the JDs_Folder before clicking Ok&quot;]" />
           </Sequence>
         </If.Else>
       </If>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Begin State 1 - Digitalize and identify keyword in CVs&quot;]" />
-      <Assign sap2010:Annotation.AnnotationText="Assign paths (collections variable) to the folder containing the CV documents" sap:VirtualizedContainerService.HintSize="755,102" sap2010:WorkflowViewState.IdRef="Assign_2">
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="This State digitalize pdf documents and match occurence of keyword for education and skills category between the CVs and the keyword library.&#xA;" DisplayName="State 1 - Scan and identify keyword in CVs" sap:VirtualizedContainerService.HintSize="484,192" sap2010:WorkflowViewState.IdRef="Sequence_52">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755,93" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Begin State 1 - Digitalize and identify keyword in CVs&quot;]" />
+      <Assign sap2010:Annotation.AnnotationText="Assign paths (collections variable) to the folder containing the CV documents" sap:VirtualizedContainerService.HintSize="755,104" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="sc:IEnumerable">[paths]</OutArgument>
         </Assign.To>
@@ -202,7 +215,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build Datatable for Education matching data and Skills matching data" DataTable="[candidateDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="755,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CV_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Education_x0020_List&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills_x0020_List&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build Datatable for Education matching data and Skills matching data" DataTable="[candidateDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="755,103" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CV_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Education_x0020_List&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills_x0020_List&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -211,7 +224,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <Sequence sap2010:Annotation.AnnotationText="Read keyword in keyword library and add them into educationCollection and skillsCollection.&#xA;&#xA;Note: Empty strings within array are not added in." sap:VirtualizedContainerService.HintSize="755,1247" sap2010:WorkflowViewState.IdRef="Sequence_34">
+      <Sequence sap2010:Annotation.AnnotationText="Read keyword in keyword library and add them into educationCollection and skillsCollection.&#xA;&#xA;Note: Empty strings within array are not added in." sap:VirtualizedContainerService.HintSize="755,1250" sap2010:WorkflowViewState.IdRef="Sequence_34">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -616,7 +629,7 @@
             <OutArgument x:TypeArguments="x:String">[resultFileName]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String" xml:space="preserve">[IO.Directory.GetCurrentDirectory + "/DocumentProcessing/Output_Folder\Matchresults " + keywordSearch + Now.ToString("dMMMyyyy hhmss") +  ".xlsx"]</InArgument>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">[IO.Directory.GetCurrentDirectory + "/DocumentProcessing/Output_Folder\Matchresults " + keywordSearch + " " +  Now.ToString("dMMMyyyy hhmss") +  ".xlsx"]</InArgument>
           </Assign.Value>
         </Assign>
         <ui:WriteRange AddHeaders="True" DataTable="[candidateDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="CandidateMatching" StartingCell="A1" WorkbookPath="[resultFileName]">
@@ -629,196 +642,352 @@
         </ui:WriteRange>
       </Sequence>
     </Sequence>
-    <If Condition="[choice = &quot;1. Search job portals for JD and match with CV&quot;]" sap:VirtualizedContainerService.HintSize="797,3873" sap2010:WorkflowViewState.IdRef="If_22">
+    <If Condition="[choice = &quot;1. Search job portals for JD and match with CV&quot;]" sap:VirtualizedContainerService.HintSize="484,712" sap2010:WorkflowViewState.IdRef="If_22">
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="This State scrape Jobstreet with search keyword in the KeywordLibrary.xlsx&#xA;&#xA;Then Scrape all posting and saving posting as PDF in JDs_Folder&#xA;&#xA;How to use:&#xA;&#xA;1. populate the excel in the project folder KeywordLibrary.xlsx under the keyword JD worksheet.&#xA;&#xA;2. run the automation.&#xA;&#xA;3. Retrieved the JD in PDF at JDs_Folder" DisplayName="State 2 - Scrape JD from JobStreet" sap:VirtualizedContainerService.HintSize="602,3696" sap2010:WorkflowViewState.IdRef="Sequence_51">
+        <Sequence sap:VirtualizedContainerService.HintSize="242,532" sap2010:WorkflowViewState.IdRef="Sequence_114">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Begin State 2 - Scrape JD from Job Portal&quot;]" />
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Jobs in Singapore - Search Job Vacancies - Career | JobStreet" sap:VirtualizedContainerService.HintSize="560,3296" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,3080" sap2010:WorkflowViewState.IdRef="Sequence_57">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="sd:DataTable" Name="extractedDT" />
-                    <Variable x:TypeArguments="x:String" Name="variable1" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'INPUT searchKeywordsFie…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="484,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[keywordSearch]">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/" DesignTimeRectangle="265, 304, 304, 44" ElementType="InputBox" FriendlyName="'INPUT searchKeywordsFie…'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="78a51f1ae97217f8d5c7ed3b9ac3b9a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" />
-                    </uix:NTypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="484,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/" DesignTimeRectangle="1333, 304, 116, 44" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAwCAYAAADab77TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVHhe7ZyxahVBFIYlYpcXEIsExSewsTKFhWCRPIAipLG3MqQTsfIJJEiSMrWtKa1Sx0pQQQRBEJVggiGj/+b+l5Nzz5rr1ZudPfwHPlhmzswu55uZ7ebc3NJm+e8sbpZrC0/L3cvLomOmI/g380sb5c6V+KXi7Dgh+NbCs7J18Ul5e2G1fJxZET3i/fmH5eXsg7Jy6X4sGHIltv9AtJU8FIydGw0Q/QM7eUSwdm8esItHBEeJor9IcHIkODkSnBwJTo4EJ0eCkyPByZHg5EhwciQ4OVUL3nu+U3z83P0U5nYBvu/o2375cm8r7K+BagXvb78pRweH5fvj7WHb55tr5fDD1wY82/wukOAJoUhI9n0QDvEoru87ayR4QlAwFC4SHEHpjOgY98e9PR24oA5evRvOwwXEb2FYoRT848XrQe9x1LD4SJWCASQhTjuOKZeLITrGGxFGKMD8lMUxPsfPDZpfx2AcF419l52XY7qkWsGAkm343YEcvwgohrnIAewHVjoF+xzI9HNbooXj3901VQsmbcck2/1RTmG+HdhF4wXb/Dbplkaw260S/I+gcAjI8OJ9UBjHICi1kTOG4GiREAmeAnZnte1gS9tOHFewdvAUsMX3fVZGmwSKxzz22eZgzJ8EMwft6LftRIInhAX3xQO+qCyolWPFcC4rCnMw8MwcLziau3n/YGH4b7Fj0Me2LqlSMEFhfURHJovKsDIBdzEDzxSFd7QJDscO5KJPgkXnSHByJDg5EpwcCU6OBCdHgpMjwcmR4ORIcHIkODkSnBwJTs6IYF3CkofwEhZdo5SH8BolXYSWg9aL0ChZVxn2k1OvMqyR+cX1cuP6oxMfLP6OqgWDq7fXwg8X47BcfgFAxp7EdiOWvQAAAABJRU5ErkJggg==" InformativeScreenshot="c262bdb86dfb384fa4f0e9737291378e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="1353, 314, 76, 24" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' type='' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG9SURBVGhD7ZXBSgMxFEXFX/M//I7u/QzxA1y77tKVa125cCGCIIiK2GJp5Ma55XLJaJk32Cm+BweG5CV5OUnag4fDWUmGkwKDpMAgKTBICgySAoOkwCCjCHw/uyoen9ePzdxdgPrWr4vyfHze7I8QFriY35b1clXeTuabtqej07K6f6ngW/N3wWQFUhQkeh+EQiyK976/ZrICURAKawlsQamM1jP3nwO93Tyw5eXdZh4eEGthqDAK/Li46Xq/Y4zDDT9hSED89lwpj7Jbz7xuVIQBzE8ZHOM5PjeoPy3dOB6KrqXzcswQRvkToUQNP13kuGRunLnIAewHKpUCPQeyfG6ldTC+9lBGEUj6nhHb/alTiLcDPRQXqPl9UpUq0G7bJAUqKAyBzbpYDwrhGASl1c1vIbB1CGQvBerN6LuBSt9N2lbgXt5A3Zz36Wb7NkmxmEe/NQdjfhLIHLSjX9vJZAVyQ14c8KJZsG5eN865VATmYOCbOS6wNXddvxPvtegY9LFtCKM8YRTu0XpSLJqhsgBvIQPfFIE1+gQ2x3by0Dd5gf+ZFBgkBQZJgUFSYJAUGCQFBkmBQVJgiFn5AqEKKmNQDK1BAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Extracting search result for &quot; + keywordSearch]" />
-                  <uix:NExtractData sap2010:Annotation.AnnotationText="Extract Table Data using:&#xA;&#xA;&lt;webctrl id='jobList' tag='DIV' /&gt;" AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,223" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="[maxRow]">
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="238, 289, 439, 8784" ElementType="InputBox" FriendlyName="'DIV jobList'" FullSelectorArgument="&lt;webctrl id='jobList' tag='DIV' /&gt;" InformativeScreenshot="490b6d68d990109dd58622df35b4bd61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
-                    </uix:NExtractData.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NExtractData>
-                  <If sap2010:Annotation.AnnotationText="Check if extractedDT is empty then use a different selector for Extract Table Data activity:&#xA;&#xA;&lt;webctrl parentid='jobList' tag='DIV' /&gt;" Condition="[extractedDT is Nothing OrElse extractedDT.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="484,416" sap2010:WorkflowViewState.IdRef="If_20">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="Rows" MaximumResults="[maxRow]">
-                        <uix:NExtractData.Target>
-                          <uix:TargetAnchorable DesignTimeRectangle="238, 237, 439, 8916" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl parentid='jobList' tag='DIV' /&gt;" InformativeScreenshot="0d26ae41ca577d415579b464c52a88e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finance management accounting Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
-                        </uix:NExtractData.Target>
-                      </uix:NExtractData>
-                    </If.Then>
-                  </If>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Downloading extracted result into pdf for  &quot; + keywordSearch]" />
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each extracted URL, save the PDF of JD into JDs_Folder" DataTable="[extractedDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="484,1533" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
-                    <ui:ForEachRow.Body>
-                      <ActivityAction x:TypeArguments="sd:DataRow">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1381" sap2010:WorkflowViewState.IdRef="Sequence_110">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="fileName" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_57">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CurrentRow(0).ToString,"[\/\\*:%.,;=\?\ "+Chr(34)+"&gt;&lt;|]","_")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[&quot;www.jobstreet.com.sg&quot; + CurrentRow(1).ToString]" />
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV  contentContainer'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="p" KeyModifiers="Ctrl" SendWindowMessages="True">
-                            <ui:SendHotkey.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10c1a59b-ddeb-433a-b9da-f83f8af9df4f" InformativeScreenshot="a821e5d48aafe5a9a1a8e5f44da2dd13" Selector="&lt;webctrl id='contentContainer' tag='DIV' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:SendHotkey.Target>
-                          </ui:SendHotkey>
-                          <uix:NSelectItem DisplayName="Select Item 'Destination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Save as PDF">
-                            <uix:NSelectItem.Items>
-                              <scg:List x:TypeArguments="x:String" Capacity="3">
-                                <x:String>Microsoft Print to PDF</x:String>
-                                <x:String>Save as PDF</x:String>
-                                <x:String>See more…</x:String>
-                              </scg:List>
-                            </uix:NSelectItem.Items>
-                            <uix:NSelectItem.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="1267, 147, 192, 32" ElementType="DropDown" FriendlyName="'Save as PDF'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" InformativeScreenshot="dabc32202777b046accbb31f1066f3f8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="1123, 155, 66, 15" ElementType="Text" FriendlyName="'Destination'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' automationid='' check:text='Destination' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAATCAYAAAAtbXvAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALgSURBVFhH7Za/ayJBFMfvTzEgWCykEFJYBFIIFoEUCzbXLWwhpEqacCBhIcg2RwrBwIULnMRCFEJYOMLBYYqgTYiVqbQQLQJbBAYsFiy+92ZndrP+WDUqXLNfWNjZ5868+ex33vMLIs1VBCZEEZgQRWBC9H/AvPXQZfJ+i7J7PbCxHGyoAJg2CjtxxLwrmUHOtNAdyfAGejHj0Oq2HDE0vik4vOnJ8bqyUdXiKDzLIXvEmXKE602nlZoB4y/k2Oj80pFIl9DZ8CtMgtmWpsBsWeFgXDHcH8eRszzfO+jWDahJ7qok1PwfDDxoox6q+Sx2uduUFLQfr/TrKRdqNdrOJCj3/sbCtZ5Cgn6zqxp4GLohV3arBC2luO/7sbcatOC8Zpse8rV0VN/c14CxjWZRx55CccpHzVt+rsvW5FoChhKr63JhwvT7hBxkosk50cL3pwrUipixc3WA/YuWOOOshUJawfmT48amHTMNJpY20OAbGjM0Lw6QkOuhfwtVoc32xXBQoVwk3FnHTILpXGWQ0Gvo8hQo14aRwT7Ny4cL15RaDcyxRWkQCD2O80exWVfPpp/ooJKlREp46cv4iIHJ22VggrHgnBg7YN4kXMMavu6YeHEHi8C08Z3qTTlYb94t5HYIBk23cE2pTzhGJOLb17uUS5Eoke9YJnKHZE9+lIot2EHrrgPGO7ryKIlrNTATx8rVx7MtgAnWGOGYQktEpuUwBserN04PZUpau5u/+VXBOE8GEiq58F2ERG3ZxDEneKCtbAbGGaJ5Sccj0JXsOx272Y9E2fNPFOpD+q4OmgbVm2Jb1JjxcAZMsD2vCobXtJh2K+sEOZJ3ySkwZ3+9ozbpkskaQ3XEpLHR8mvMp8H4lp37PybYlRTsUU1perONXlE+DXQl89HvAk67JN7Rea1aHQwH/OB1umQWhQp1KFknuGzrxO06ics1utLqYCIFFYEJUQQmRBGYEEVg5gr4B6Hq+4Gm86LYAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NSelectItem.Target>
-                          </uix:NSelectItem>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="1318, 816, 68, 32" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' automationid='' check:text='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkCAYAAAAq23xmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALKSURBVGhD7ZpPaxpBGIf7OTz2U+SLePPSc45eSm85mWM81RyKEMJSCjGEIoSCiOBBQg8teygYKDGlGLFN/N9xV/31fWd199VOkkN3S4rzwA/c2Z0d5uGdWWV9BsuDWEGPsCbo8zcPL4o9PH/ZQSp7szXh+fK8ef6bhIL45LaJ2QzPf1NSKIgNmjptW9iDJBS07dWzCnuQhIJMF29rJFaQIRIryBCJFWSIxAoyRGIFGSKxggyRJCooU52iNVkOQPR7HorHXeO1TymS5ASdTdGn+yqSUqoMkW+QLJ8bPORzhuufUCTJCbpgGwu41agtXZui2fbgOHScG6DUXgSDE+rnFIU31H7uQdFx69Nt0C83hjunhu9j7NCxrkq+gFEz1Kt30ZgxRZKcoLcK+ku7P4frjpB9vb60CtcsZ45KuYfdyrLarsd0boA6L8vORAtJ1Vg04Naie6quwr4zRLlL95j7cA6j+8YRSaJ70M7JL7i9qEow8lE6YVFdpI9IzNFtIEFI4X57l9yHJk5LMX9Fn3lZhu0zlFdC3gdim41ozDgiSVRQmIM77Dc8dLgYfB8FmjjLa46EPGYpaLV/ubVAnLoa6XZn/XdkSPNiY7y/jCQxQUVaQkr5KIq2jN5MFqif9VAZ0McJVYZeeusVlMr29XnVndGSWuDjh6C/riauoHdUfU6UzEE0RhyRJCYo3fD1ZttvKxRpn3lVUWjqR/4MpUMSMqKPExJ4OkDe9XXFRIJukP3CMonl8tLtqycj7UH5015QlRO633E0bhyRJLjEutilp5b8HqRoDyqf/9Dn155G1N7UFTXF3qr/akP+OhT33Og3X6B1OUZGnI8jkn+zB/1nkVhBhkisIEMkVpAhEivIEIkVZIjECjJEYgUZIgkF2ReHQe59cWhfPQe599Wz/fPCI39eYPgkG9w2UTxfnvemHGZNkOVPrKAHAX4DK1FYbPGt13UAAAAASUVORK5CYII=" InformativeScreenshot="cae7610efafa63391db8ed7ffb82c7b7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
-                            </uix:NClick.Target>
-                          </uix:NClick>
-                          <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;+fileName+&quot;.pdf&quot;]" />
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="v" KeyModifiers="Ctrl" SendWindowMessages="True">
-                            <ui:SendHotkey.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="597fc562-6995-4f8a-bd69-484f464cc23c" InformativeScreenshot="f28fc1cf1601c7b7eddea7aa62b76eb8" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:SendHotkey.Target>
-                          </ui:SendHotkey>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="987, 674, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZbBkcMgDEXpiW6oZG+0QitUsWd34A60kg2JFLMzO5NEgdl/eBPLyJeH+CTs+07ADwh3BsKdMcLD1zd4A8axKQbN4HmMY1O0hm3bwAuAcGcg3BkIdwbCnZlfeEkUQmgkKqOehZhbeM0UtWSuc1HrCzK3cJnumKmO1hZlbuFbocRREnO9rJXUY4ZJhd9VyjFQ0idAb9hxWj4fTZMLF06RIsrIvCGbEilXfhbBh/xzTTbl/Eb1yBr3jTbRgwWEN9qE3qSby7TLFLF9evl5ON0NtTGerCOcqTmeosxlKifgPr3SI9Pbf49vTf9nmVt44X8lPQZatBwSL9ms4kLqmHi6teDf7wJv5hbeRF1j4J7r4ZCrhPe1x8h4jBVEyv8Awp2BcGcg3BkIdwbCnfmzcPBajGNTDJrB8xjHugDvB8KdgXBXdvoBtsHYGrTo71oAAAAASUVORK5CYII=" InformativeScreenshot="cd7bc6cc823dc9fdce77091f3e0273fb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                            </uix:NClick.Target>
-                          </uix:NClick>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ForEachRow.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ForEachRow>
-                </Sequence>
-              </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-4, 0, 1731, 1399" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="38ca9e3dcd5af7113a38089caa6699ec.png" Selector="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet'/&gt;" Url="https://www.jobstreet.com.sg/" />
-            </uix:NApplicationCard.TargetApp>
+          <Sequence sap2010:Annotation.AnnotationText="This State scrape Jobstreet with search keyword in the KeywordLibrary.xlsx&#xA;&#xA;Then Scrape all posting and saving posting as PDF in JDs_Folder" DisplayName="State 2a - Scrape JD from JobStreet" sap:VirtualizedContainerService.HintSize="200,192" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </uix:NApplicationCard>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,93" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Begin State 2a - Scrape JD from JobStreet&quot;]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Jobs in Singapore - Search Job Vacancies - Career | JobStreet" sap:VirtualizedContainerService.HintSize="560,3323" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,3106" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="extractedDT" />
+                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'INPUT searchKeywordsFie…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[keywordSearch]">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/" DesignTimeRectangle="265, 304, 304, 44" ElementType="InputBox" FriendlyName="'INPUT searchKeywordsFie…'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="78a51f1ae97217f8d5c7ed3b9ac3b9a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="484,167" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/" DesignTimeRectangle="1333, 304, 116, 44" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAwCAYAAADab77TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVHhe7ZyxahVBFIYlYpcXEIsExSewsTKFhWCRPIAipLG3MqQTsfIJJEiSMrWtKa1Sx0pQQQRBEJVggiGj/+b+l5Nzz5rr1ZudPfwHPlhmzswu55uZ7ebc3NJm+e8sbpZrC0/L3cvLomOmI/g380sb5c6V+KXi7Dgh+NbCs7J18Ul5e2G1fJxZET3i/fmH5eXsg7Jy6X4sGHIltv9AtJU8FIydGw0Q/QM7eUSwdm8esItHBEeJor9IcHIkODkSnBwJTo4EJ0eCkyPByZHg5EhwciQ4OVUL3nu+U3z83P0U5nYBvu/o2375cm8r7K+BagXvb78pRweH5fvj7WHb55tr5fDD1wY82/wukOAJoUhI9n0QDvEoru87ayR4QlAwFC4SHEHpjOgY98e9PR24oA5evRvOwwXEb2FYoRT848XrQe9x1LD4SJWCASQhTjuOKZeLITrGGxFGKMD8lMUxPsfPDZpfx2AcF419l52XY7qkWsGAkm343YEcvwgohrnIAewHVjoF+xzI9HNbooXj3901VQsmbcck2/1RTmG+HdhF4wXb/Dbplkaw260S/I+gcAjI8OJ9UBjHICi1kTOG4GiREAmeAnZnte1gS9tOHFewdvAUsMX3fVZGmwSKxzz22eZgzJ8EMwft6LftRIInhAX3xQO+qCyolWPFcC4rCnMw8MwcLziau3n/YGH4b7Fj0Me2LqlSMEFhfURHJovKsDIBdzEDzxSFd7QJDscO5KJPgkXnSHByJDg5EpwcCU6OBCdHgpMjwcmR4ORIcHIkODkSnBwJTs6IYF3CkofwEhZdo5SH8BolXYSWg9aL0ChZVxn2k1OvMqyR+cX1cuP6oxMfLP6OqgWDq7fXwg8X47BcfgFAxp7EdiOWvQAAAABJRU5ErkJggg==" InformativeScreenshot="c262bdb86dfb384fa4f0e9737291378e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1353, 314, 76, 24" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' type='' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG9SURBVGhD7ZXBSgMxFEXFX/M//I7u/QzxA1y77tKVa125cCGCIIiK2GJp5Ma55XLJaJk32Cm+BweG5CV5OUnag4fDWUmGkwKDpMAgKTBICgySAoOkwCCjCHw/uyoen9ePzdxdgPrWr4vyfHze7I8QFriY35b1clXeTuabtqej07K6f6ngW/N3wWQFUhQkeh+EQiyK976/ZrICURAKawlsQamM1jP3nwO93Tyw5eXdZh4eEGthqDAK/Li46Xq/Y4zDDT9hSED89lwpj7Jbz7xuVIQBzE8ZHOM5PjeoPy3dOB6KrqXzcswQRvkToUQNP13kuGRunLnIAewHKpUCPQeyfG6ldTC+9lBGEUj6nhHb/alTiLcDPRQXqPl9UpUq0G7bJAUqKAyBzbpYDwrhGASl1c1vIbB1CGQvBerN6LuBSt9N2lbgXt5A3Zz36Wb7NkmxmEe/NQdjfhLIHLSjX9vJZAVyQ14c8KJZsG5eN865VATmYOCbOS6wNXddvxPvtegY9LFtCKM8YRTu0XpSLJqhsgBvIQPfFIE1+gQ2x3by0Dd5gf+ZFBgkBQZJgUFSYJAUGCQFBkmBQVJgiFn5AqEKKmNQDK1BAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,93" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Extracting search result for &quot; + keywordSearch]" />
+                    <uix:NExtractData sap2010:Annotation.AnnotationText="Extract Table Data using:&#xA;&#xA;&lt;webctrl id='jobList' tag='DIV' /&gt;" AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,227" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="[maxRow]">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="238, 289, 439, 8784" ElementType="InputBox" FriendlyName="'DIV jobList'" FullSelectorArgument="&lt;webctrl id='jobList' tag='DIV' /&gt;" InformativeScreenshot="490b6d68d990109dd58622df35b4bd61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <If sap2010:Annotation.AnnotationText="Check if extractedDT is empty then use a different selector for Extract Table Data activity:&#xA;&#xA;&lt;webctrl parentid='jobList' tag='DIV' /&gt;" Condition="[extractedDT is Nothing OrElse extractedDT.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="484,424" sap2010:WorkflowViewState.IdRef="If_20">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="Rows" MaximumResults="[maxRow]">
+                          <uix:NExtractData.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="238, 237, 439, 8916" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl parentid='jobList' tag='DIV' /&gt;" InformativeScreenshot="0d26ae41ca577d415579b464c52a88e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finance management accounting Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
+                          </uix:NExtractData.Target>
+                        </uix:NExtractData>
+                      </If.Then>
+                    </If>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,93" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Downloading extracted result into pdf for  &quot; + keywordSearch]" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each extracted URL, save the PDF of JD into JDs_Folder" DataTable="[extractedDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="484,1540" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1387" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="fileName" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_57">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CurrentRow(0).ToString,"[\/\\*:%.,;=\?\ "+Chr(34)+"&gt;&lt;|]","_")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[&quot;www.jobstreet.com.sg&quot; + CurrentRow(1).ToString]" />
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV  contentContainer'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="p" KeyModifiers="Ctrl" SendWindowMessages="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10c1a59b-ddeb-433a-b9da-f83f8af9df4f" InformativeScreenshot="a821e5d48aafe5a9a1a8e5f44da2dd13" Selector="&lt;webctrl id='contentContainer' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                            <uix:NSelectItem DisplayName="Select Item 'Destination'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Save as PDF">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="3">
+                                  <x:String>Microsoft Print to PDF</x:String>
+                                  <x:String>Save as PDF</x:String>
+                                  <x:String>See more…</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="1267, 147, 192, 32" ElementType="DropDown" FriendlyName="'Save as PDF'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" InformativeScreenshot="dabc32202777b046accbb31f1066f3f8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1123, 155, 66, 15" ElementType="Text" FriendlyName="'Destination'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' automationid='' check:text='Destination' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAATCAYAAAAtbXvAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALgSURBVFhH7Za/ayJBFMfvTzEgWCykEFJYBFIIFoEUCzbXLWwhpEqacCBhIcg2RwrBwIULnMRCFEJYOMLBYYqgTYiVqbQQLQJbBAYsFiy+92ZndrP+WDUqXLNfWNjZ5868+ex33vMLIs1VBCZEEZgQRWBC9H/AvPXQZfJ+i7J7PbCxHGyoAJg2CjtxxLwrmUHOtNAdyfAGejHj0Oq2HDE0vik4vOnJ8bqyUdXiKDzLIXvEmXKE602nlZoB4y/k2Oj80pFIl9DZ8CtMgtmWpsBsWeFgXDHcH8eRszzfO+jWDahJ7qok1PwfDDxoox6q+Sx2uduUFLQfr/TrKRdqNdrOJCj3/sbCtZ5Cgn6zqxp4GLohV3arBC2luO/7sbcatOC8Zpse8rV0VN/c14CxjWZRx55CccpHzVt+rsvW5FoChhKr63JhwvT7hBxkosk50cL3pwrUipixc3WA/YuWOOOshUJawfmT48amHTMNJpY20OAbGjM0Lw6QkOuhfwtVoc32xXBQoVwk3FnHTILpXGWQ0Gvo8hQo14aRwT7Ny4cL15RaDcyxRWkQCD2O80exWVfPpp/ooJKlREp46cv4iIHJ22VggrHgnBg7YN4kXMMavu6YeHEHi8C08Z3qTTlYb94t5HYIBk23cE2pTzhGJOLb17uUS5Eoke9YJnKHZE9+lIot2EHrrgPGO7ryKIlrNTATx8rVx7MtgAnWGOGYQktEpuUwBserN04PZUpau5u/+VXBOE8GEiq58F2ERG3ZxDEneKCtbAbGGaJ5Sccj0JXsOx272Y9E2fNPFOpD+q4OmgbVm2Jb1JjxcAZMsD2vCobXtJh2K+sEOZJ3ySkwZ3+9ozbpkskaQ3XEpLHR8mvMp8H4lp37PybYlRTsUU1perONXlE+DXQl89HvAk67JN7Rea1aHQwH/OB1umQWhQp1KFknuGzrxO06ics1utLqYCIFFYEJUQQmRBGYEEVg5gr4B6Hq+4Gm86LYAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="1318, 816, 68, 32" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' automationid='' check:text='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkCAYAAAAq23xmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALKSURBVGhD7ZpPaxpBGIf7OTz2U+SLePPSc45eSm85mWM81RyKEMJSCjGEIoSCiOBBQg8teygYKDGlGLFN/N9xV/31fWd199VOkkN3S4rzwA/c2Z0d5uGdWWV9BsuDWEGPsCbo8zcPL4o9PH/ZQSp7szXh+fK8ef6bhIL45LaJ2QzPf1NSKIgNmjptW9iDJBS07dWzCnuQhIJMF29rJFaQIRIryBCJFWSIxAoyRGIFGSKxggyRJCooU52iNVkOQPR7HorHXeO1TymS5ASdTdGn+yqSUqoMkW+QLJ8bPORzhuufUCTJCbpgGwu41agtXZui2fbgOHScG6DUXgSDE+rnFIU31H7uQdFx69Nt0C83hjunhu9j7NCxrkq+gFEz1Kt30ZgxRZKcoLcK+ku7P4frjpB9vb60CtcsZ45KuYfdyrLarsd0boA6L8vORAtJ1Vg04Naie6quwr4zRLlL95j7cA6j+8YRSaJ70M7JL7i9qEow8lE6YVFdpI9IzNFtIEFI4X57l9yHJk5LMX9Fn3lZhu0zlFdC3gdim41ozDgiSVRQmIM77Dc8dLgYfB8FmjjLa46EPGYpaLV/ubVAnLoa6XZn/XdkSPNiY7y/jCQxQUVaQkr5KIq2jN5MFqif9VAZ0McJVYZeeusVlMr29XnVndGSWuDjh6C/riauoHdUfU6UzEE0RhyRJCYo3fD1ZttvKxRpn3lVUWjqR/4MpUMSMqKPExJ4OkDe9XXFRIJukP3CMonl8tLtqycj7UH5015QlRO633E0bhyRJLjEutilp5b8HqRoDyqf/9Dn155G1N7UFTXF3qr/akP+OhT33Og3X6B1OUZGnI8jkn+zB/1nkVhBhkisIEMkVpAhEivIEIkVZIjECjJEYgUZIgkF2ReHQe59cWhfPQe599Wz/fPCI39eYPgkG9w2UTxfnvemHGZNkOVPrKAHAX4DK1FYbPGt13UAAAAASUVORK5CYII=" InformativeScreenshot="cae7610efafa63391db8ed7ffb82c7b7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;+ &quot;JobStreet_&quot; + fileName + &quot;.pdf&quot;]" />
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="v" KeyModifiers="Ctrl" SendWindowMessages="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="597fc562-6995-4f8a-bd69-484f464cc23c" InformativeScreenshot="f28fc1cf1601c7b7eddea7aa62b76eb8" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="987, 674, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZbBkcMgDEXpiW6oZG+0QitUsWd34A60kg2JFLMzO5NEgdl/eBPLyJeH+CTs+07ADwh3BsKdMcLD1zd4A8axKQbN4HmMY1O0hm3bwAuAcGcg3BkIdwbCnZlfeEkUQmgkKqOehZhbeM0UtWSuc1HrCzK3cJnumKmO1hZlbuFbocRREnO9rJXUY4ZJhd9VyjFQ0idAb9hxWj4fTZMLF06RIsrIvCGbEilXfhbBh/xzTTbl/Eb1yBr3jTbRgwWEN9qE3qSby7TLFLF9evl5ON0NtTGerCOcqTmeosxlKifgPr3SI9Pbf49vTf9nmVt44X8lPQZatBwSL9ms4kLqmHi6teDf7wJv5hbeRF1j4J7r4ZCrhPe1x8h4jBVEyv8Awp2BcGcg3BkIdwbCnfmzcPBajGNTDJrB8xjHugDvB8KdgXBXdvoBtsHYGrTo71oAAAAASUVORK5CYII=" InformativeScreenshot="cd7bc6cc823dc9fdce77091f3e0273fb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-4, 0, 1731, 1399" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="38ca9e3dcd5af7113a38089caa6699ec.png" Selector="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet'/&gt;" Url="https://www.jobstreet.com.sg/" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+          </Sequence>
+          <Sequence sap2010:Annotation.AnnotationText="This State scrape MyCareerFuture with search keyword in the KeywordLibrary.xlsx&#xA;&#xA;Then Scrape all posting and saving posting as PDF in JDs_Folder" DisplayName="State 2b - Scrape JD from mycareerfuture" sap:VirtualizedContainerService.HintSize="200,208" sap2010:WorkflowViewState.IdRef="Sequence_113">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="extractedMyCareerFutureDT1" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,93" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Begin State 2b - Scrape JD from MyCareerFuture&quot;]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: MyCareersFuture Singapore | Find jobs in Singapore that match your skills" sap:VirtualizedContainerService.HintSize="486,2799" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,2582" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'INPUT search-text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410,228" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" Text="[keywordSearch]">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.mycareersfuture.gov.sg/" DesignTimeRectangle="462, 294, 507, 50" ElementType="InputBox" FriendlyName="'INPUT search-text'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="7ccb179effccee76376b1af156732f1c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MyCareersFuture Singapore | Find jobs in Singapore that match your skills' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON search-button'" sap:VirtualizedContainerService.HintSize="410,167" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.mycareersfuture.gov.sg/" DesignTimeRectangle="1484, 294, 114, 50" ElementType="Button" FriendlyName="'BUTTON search-button'" FullSelectorArgument="&lt;webctrl id='search-button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search-button' tag='BUTTON' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAA2CAYAAAAS/219AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANSSURBVHhe7Z07a1RBFIBT+AOs/APqEjXRRMFKawvDGhdNwELttNMfkdcuqGgh2FlYir2gkMrCJlaKD9QUmhCwSIoEFnHcb7Jn2bk7u24WhD0n58BH7uPMTfExrzv33h25eHguWGfqyFyYPr4Yrk7UwszkLldOVkNlfCn+lWOXGzm58hrZF2IFBFfGlhLBUfKpaiiPLmTLaKUl9v3IA0c5LtYoLtYoLtYoLtYoLtYoidhyaXeYn0t0dJGIZR7HRD2X6OiiQyzkEh1dJGKnjs7HuzG5REcXiVjZyCU6ujAv9sfNl2Hr+edQX90K4fefCNsc41yujAXMikValPmPIMeiYJNifz1aaWoLYfvNz7B2+3X4UnoaPhx4GGGbY5yToEzuWlpJxLIeOX1sIZuohXapyMvltLN261Uz25bcROzs6Vq4cT6fqAGaVInVCy/isY8HH4f1O8thZ2Uj1L9tdpQBciWsNMuJ2BnlYqVPpRay/3XiWZTZHogulgNqN8E1cue1kYqd1CtWaiv9JvsIFKn175t91UTpcy3UWjNimb4Q0q+u312O+0gt5nZDai3Xyp3XRIfY6+fuZxOHHWmGGfGyv/NuI+7vpfZRlrDQHHeIvXb2XjZx2Ik3HxrBdIZ9aipRzOsFZWM0rpU7r4kOsbNndC4CFMVCt4FSN0yLrYxXs4nDTrEpHgTTTTEPU+cSh53i4GkQzA6eWGTnKYpc4rBTnO4MgtnpDrVVq1iQ5niQWiu3Fi00w5CI1f7Mk9RaQm4p9oP5W4q8z6JZLCSLAM1bi72QfpUwuwjAG2a8pJRL1ES7XPpN5DHiZToDbHNM+lRCpH469CRSvKY2ErGMiiGXqA2aVOlzewU50vwidPvtekS73ERsHBWP6l6PLYI0pi9RMjcxGrDNsWJ/KmIJ7XITsbKRS9wvWJHrYjNYkOtiuyByXaxBEKpRKrhYo7hYo7hYo7hYo7hYo7hYo7hYo7hYo7hYo/BNyMqJxcBXClysIWQJljcoXawhWH6l1iLXxRoCj+XSvIu1hrjk4QkXa4iW2DEXawpxST/bEtsLvlEhI672T6zLp9g5zpOO8iir83/px0dfYoF2Wy4mP5TQ/m39S41/livndAcR8sD+Xuntoxb+AtiLK3Wv1cl7AAAAAElFTkSuQmCC" InformativeScreenshot="55ab717c6b20e7e1f1c23865bbec66f5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MyCareersFuture Singapore | Find jobs in Singapore that match your skills' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,93" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Extracting search result for &quot; + keywordSearch]" />
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedMyCareerFutureDT1]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='section' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="410,167" sap2010:WorkflowViewState.IdRef="NExtractData_7" LimitExtractionTo="Rows" MaximumResults="[maxRow]">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="790, 358, 840, 4822" FriendlyName="'SECTION search-results'" FullSelectorArgument="&lt;webctrl id='search-results' tag='SECTION' /&gt;" InformativeScreenshot="2602fad773c7bf842b8d4803a382ef43.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results | MyCareersFuture Singapore' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,93" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Downloading extracted result into pdf for  &quot; + keywordSearch]" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each extracted URL, save the PDF of JD into JDs_Folder" DataTable="[extractedMyCareerFutureDT1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,1540" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1387" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="fileName" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_59">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CurrentRow(0).ToString,"[\/\\*:%.,;=\?\ "+Chr(34)+"&gt;&lt;|]","_")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[&quot;www.mycareersfuture.gov.sg&quot; + CurrentRow(1).ToString]" />
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV  contentContainer'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="p" KeyModifiers="Ctrl" SendWindowMessages="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10c1a59b-ddeb-433a-b9da-f83f8af9df4f" InformativeScreenshot="fa13520497ad21ef32456e5a35a6d9a2" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div' parentid='app' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                            <uix:NSelectItem DisplayName="Select Item 'Destination'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Save as PDF">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="3">
+                                  <x:String>Microsoft Print to PDF</x:String>
+                                  <x:String>Save as PDF</x:String>
+                                  <x:String>See more…</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="1267, 147, 192, 32" ElementType="DropDown" FriendlyName="'Save as PDF'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" InformativeScreenshot="dabc32202777b046accbb31f1066f3f8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1123, 155, 66, 15" ElementType="Text" FriendlyName="'Destination'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Destination' role='text' automationid='' check:text='Destination' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAATCAYAAAAtbXvAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALgSURBVFhH7Za/ayJBFMfvTzEgWCykEFJYBFIIFoEUCzbXLWwhpEqacCBhIcg2RwrBwIULnMRCFEJYOMLBYYqgTYiVqbQQLQJbBAYsFiy+92ZndrP+WDUqXLNfWNjZ5868+ex33vMLIs1VBCZEEZgQRWBC9H/AvPXQZfJ+i7J7PbCxHGyoAJg2CjtxxLwrmUHOtNAdyfAGejHj0Oq2HDE0vik4vOnJ8bqyUdXiKDzLIXvEmXKE602nlZoB4y/k2Oj80pFIl9DZ8CtMgtmWpsBsWeFgXDHcH8eRszzfO+jWDahJ7qok1PwfDDxoox6q+Sx2uduUFLQfr/TrKRdqNdrOJCj3/sbCtZ5Cgn6zqxp4GLohV3arBC2luO/7sbcatOC8Zpse8rV0VN/c14CxjWZRx55CccpHzVt+rsvW5FoChhKr63JhwvT7hBxkosk50cL3pwrUipixc3WA/YuWOOOshUJawfmT48amHTMNJpY20OAbGjM0Lw6QkOuhfwtVoc32xXBQoVwk3FnHTILpXGWQ0Gvo8hQo14aRwT7Ny4cL15RaDcyxRWkQCD2O80exWVfPpp/ooJKlREp46cv4iIHJ22VggrHgnBg7YN4kXMMavu6YeHEHi8C08Z3qTTlYb94t5HYIBk23cE2pTzhGJOLb17uUS5Eoke9YJnKHZE9+lIot2EHrrgPGO7ryKIlrNTATx8rVx7MtgAnWGOGYQktEpuUwBserN04PZUpau5u/+VXBOE8GEiq58F2ERG3ZxDEneKCtbAbGGaJ5Sccj0JXsOx272Y9E2fNPFOpD+q4OmgbVm2Jb1JjxcAZMsD2vCobXtJh2K+sEOZJ3ySkwZ3+9ozbpkskaQ3XEpLHR8mvMp8H4lp37PybYlRTsUU1perONXlE+DXQl89HvAk67JN7Rea1aHQwH/OB1umQWhQp1KFknuGzrxO06ics1utLqYCIFFYEJUQQmRBGYEEVg5gr4B6Hq+4Gm86LYAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="1318, 816, 68, 32" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' role='document' /&gt;&lt;ctrl name='Save' role='push button' automationid='' check:text='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkCAYAAAAq23xmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALKSURBVGhD7ZpPaxpBGIf7OTz2U+SLePPSc45eSm85mWM81RyKEMJSCjGEIoSCiOBBQg8teygYKDGlGLFN/N9xV/31fWd199VOkkN3S4rzwA/c2Z0d5uGdWWV9BsuDWEGPsCbo8zcPL4o9PH/ZQSp7szXh+fK8ef6bhIL45LaJ2QzPf1NSKIgNmjptW9iDJBS07dWzCnuQhIJMF29rJFaQIRIryBCJFWSIxAoyRGIFGSKxggyRJCooU52iNVkOQPR7HorHXeO1TymS5ASdTdGn+yqSUqoMkW+QLJ8bPORzhuufUCTJCbpgGwu41agtXZui2fbgOHScG6DUXgSDE+rnFIU31H7uQdFx69Nt0C83hjunhu9j7NCxrkq+gFEz1Kt30ZgxRZKcoLcK+ku7P4frjpB9vb60CtcsZ45KuYfdyrLarsd0boA6L8vORAtJ1Vg04Naie6quwr4zRLlL95j7cA6j+8YRSaJ70M7JL7i9qEow8lE6YVFdpI9IzNFtIEFI4X57l9yHJk5LMX9Fn3lZhu0zlFdC3gdim41ozDgiSVRQmIM77Dc8dLgYfB8FmjjLa46EPGYpaLV/ubVAnLoa6XZn/XdkSPNiY7y/jCQxQUVaQkr5KIq2jN5MFqif9VAZ0McJVYZeeusVlMr29XnVndGSWuDjh6C/riauoHdUfU6UzEE0RhyRJCYo3fD1ZttvKxRpn3lVUWjqR/4MpUMSMqKPExJ4OkDe9XXFRIJukP3CMonl8tLtqycj7UH5015QlRO633E0bhyRJLjEutilp5b8HqRoDyqf/9Dn155G1N7UFTXF3qr/akP+OhT33Og3X6B1OUZGnI8jkn+zB/1nkVhBhkisIEMkVpAhEivIEIkVZIjECjJEYgUZIgkF2ReHQe59cWhfPQe599Wz/fPCI39eYPgkG9w2UTxfnvemHGZNkOVPrKAHAX4DK1FYbPGt13UAAAAASUVORK5CYII=" InformativeScreenshot="cae7610efafa63391db8ed7ffb82c7b7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Rpa developer Jobs in Singapore, Job Vacancies - May 2021 | JobS*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="SetToClipboard_3" Text="[IO.Directory.GetCurrentDirectory + &quot;\DocumentProcessing\JDs_Folder\&quot;+ &quot;MyCareerFuture_&quot; +fileName+&quot;.pdf&quot;]" />
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="v" KeyModifiers="Ctrl" SendWindowMessages="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="597fc562-6995-4f8a-bd69-484f464cc23c" InformativeScreenshot="f28fc1cf1601c7b7eddea7aa62b76eb8" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="987, 674, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZbBkcMgDEXpiW6oZG+0QitUsWd34A60kg2JFLMzO5NEgdl/eBPLyJeH+CTs+07ADwh3BsKdMcLD1zd4A8axKQbN4HmMY1O0hm3bwAuAcGcg3BkIdwbCnZlfeEkUQmgkKqOehZhbeM0UtWSuc1HrCzK3cJnumKmO1hZlbuFbocRREnO9rJXUY4ZJhd9VyjFQ0idAb9hxWj4fTZMLF06RIsrIvCGbEilXfhbBh/xzTTbl/Eb1yBr3jTbRgwWEN9qE3qSby7TLFLF9evl5ON0NtTGerCOcqTmeosxlKifgPr3SI9Pbf49vTf9nmVt44X8lPQZatBwSL9ms4kLqmHi6teDf7wJv5hbeRF1j4J7r4ZCrhPe1x8h4jBVEyv8Awp2BcGcg3BkIdwbCnfmzcPBajGNTDJrB8xjHugDvB8KdgXBXdvoBtsHYGrTo71oAAAAASUVORK5CYII=" InformativeScreenshot="cd7bc6cc823dc9fdce77091f3e0273fb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="216, 0, 2063, 1407" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="46a9d1c4954068883f25e37a1e456448.png" Selector="&lt;html app='chrome.exe' title='MyCareersFuture Singapore | Find jobs in Singapore that match your skills'/&gt;" Url="https://www.mycareersfuture.gov.sg/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
         </Sequence>
       </If.Then>
     </If>
-    <Sequence sap2010:Annotation.AnnotationText="This State digitalize all the PDF JD and match it with skills and education keywordlibrary.xlsx then write results into matchingResults.xlsx under JDMatching worksheet&#xA;&#xA;How to use:&#xA;&#xA;1. Make sure there is PDF JD in JDs_Folder&#xA;&#xA;2. Check results after running this state in matchingResults.xlsx." DisplayName="State 3 - Scan and Identify keyword in JD" sap:VirtualizedContainerService.HintSize="797,3133" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap2010:Annotation.AnnotationText="This State digitalize all the PDF JD and match it with skills and education keywordlibrary.xlsx then write results into matchingResults.xlsx under JDMatching worksheet&#xA;&#xA;How to use:&#xA;&#xA;1. Make sure there is PDF JD in JDs_Folder&#xA;&#xA;2. Check results after running this state in matchingResults.xlsx." DisplayName="State 3 - Scan and Identify keyword in JD" sap:VirtualizedContainerService.HintSize="484,335" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Default="[new List (of String)]" Name="educationCollection_JD" />
         <Variable x:TypeArguments="scg:List(x:String)" Default="[new List (of String)]" Name="skillsCollection_JD" />
@@ -827,12 +996,12 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="640,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Begin State 3 - Digitize and identify keyword in JD&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="640,93" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Begin State 3 - Digitize and identify keyword in JD&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -840,7 +1009,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build Datatable for JD matching data and Skills matching data" DataTable="[jdDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="640,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;JD_x0020_Title&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Education_x0020_Requirement&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills_x0020_Requirement&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build Datatable for JD matching data and Skills matching data" DataTable="[jdDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="640,103" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;JD_x0020_Title&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Education_x0020_Requirement&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills_x0020_Requirement&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;9999&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -849,7 +1018,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <Assign sap2010:Annotation.AnnotationText="Assign paths (collections variable) to the folder containing the JD documents" sap:VirtualizedContainerService.HintSize="640,102" sap2010:WorkflowViewState.IdRef="Assign_29">
+      <Assign sap2010:Annotation.AnnotationText="Assign paths (collections variable) to the folder containing the JD documents" sap:VirtualizedContainerService.HintSize="640,104" sap2010:WorkflowViewState.IdRef="Assign_29">
         <Assign.To>
           <OutArgument x:TypeArguments="sc:IEnumerable">[paths]</OutArgument>
         </Assign.To>
@@ -862,13 +1031,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[indexPath3]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="640,2495" sap2010:WorkflowViewState.IdRef="ForEach`1_17" Values="[paths]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[indexPath3]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="640,2516" sap2010:WorkflowViewState.IdRef="ForEach`1_17" Values="[paths]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="path" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,2361" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,2381" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="textJD" />
                 <Variable x:TypeArguments="p2:Document" Name="domJD" />
@@ -896,8 +1065,8 @@
                   <InArgument x:TypeArguments="x:Object">[docName_JD.ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Digitalizing JD document &quot; + docName_JD]" />
-              <p1:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[domJD]" DocumentPath="[path]" DocumentText="[textJD]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="562,293" sap2010:WorkflowViewState.IdRef="DigitizeDocument_3">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="562,93" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Digitalizing JD document &quot; + docName_JD]" />
+              <p1:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[domJD]" DocumentPath="[path]" DocumentText="[textJD]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="562,298" sap2010:WorkflowViewState.IdRef="DigitizeDocument_3">
                 <p1:DigitizeDocument.OCREngine>
                   <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                     <ActivityFunc.Argument>
@@ -921,7 +1090,7 @@
                   <InArgument x:TypeArguments="x:String">[textJD.ToLower]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV with Keyword library and add to CV specific educationCollection_CV" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,108" sap2010:WorkflowViewState.IdRef="ForEach`1_18" Values="[educationCollection_Keyword]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV with Keyword library and add to CV specific educationCollection_CV" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,112" sap2010:WorkflowViewState.IdRef="ForEach`1_18" Values="[educationCollection_Keyword]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
@@ -967,7 +1136,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEach>
-              <Assign sap2010:Annotation.AnnotationText="Assign the value of educationCollection_JD to jdDT under the Education Requirement row" sap:VirtualizedContainerService.HintSize="562,117" sap2010:WorkflowViewState.IdRef="Assign_35">
+              <Assign sap2010:Annotation.AnnotationText="Assign the value of educationCollection_JD to jdDT under the Education Requirement row" sap:VirtualizedContainerService.HintSize="562,120" sap2010:WorkflowViewState.IdRef="Assign_35">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Object">[jdDT.Rows(indexPath3).Item("Education Requirement")]</OutArgument>
                 </Assign.To>
@@ -993,13 +1162,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV with Keyword library and add to CV specific skillsCollection_CV" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,579" sap2010:WorkflowViewState.IdRef="ForEach`1_19" Values="[skillsCollection_Keyword]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV with Keyword library and add to CV specific skillsCollection_CV" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,583" sap2010:WorkflowViewState.IdRef="ForEach`1_19" Values="[skillsCollection_Keyword]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:String" Name="skill" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,414" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,417" sap2010:WorkflowViewState.IdRef="Sequence_71">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="str" />
                         <Variable x:TypeArguments="x:Boolean" Default="False" Name="HasAdded" />
@@ -1009,7 +1178,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If sap2010:Annotation.AnnotationText="" Condition="[textJD.ToString.Contains(skill)]" sap:VirtualizedContainerService.HintSize="484,322" sap2010:WorkflowViewState.IdRef="If_12">
+                      <If sap2010:Annotation.AnnotationText="" Condition="[textJD.ToString.Contains(skill)]" sap:VirtualizedContainerService.HintSize="484,325" sap2010:WorkflowViewState.IdRef="If_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1039,7 +1208,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEach>
-              <Assign sap2010:Annotation.AnnotationText="Assign the value of skillsCollection_JD to jdDT under the Skills Requirement row" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_37">
+              <Assign sap2010:Annotation.AnnotationText="Assign the value of skillsCollection_JD to jdDT under the Skills Requirement row" sap:VirtualizedContainerService.HintSize="562,104" sap2010:WorkflowViewState.IdRef="Assign_37">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Object">[jdDT.Rows(indexPath3).Item("Skills Requirement")]</OutArgument>
                 </Assign.To>
@@ -1077,7 +1246,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="This State 4 matches CV and JD skills and populate from column E onwards. Education and Skills keyword in the CV are compared with the JD to derive the percentage match as well as education requirement" DisplayName="State 4 - Matching of CV and JD  " sap:VirtualizedContainerService.HintSize="797,4227" sap2010:WorkflowViewState.IdRef="Sequence_85">
+    <Sequence sap2010:Annotation.AnnotationText="This State 4 matches CV and JD skills and populate from column E onwards. Education and Skills keyword in the CV are compared with the JD to derive the percentage match as well as education requirement" DisplayName="State 4 - Matching of CV and JD  " sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="Sequence_85">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="cv_s4_DT" />
         <Variable x:TypeArguments="sd:DataTable" Name="jd_s4_DT" />
@@ -1087,12 +1256,12 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="714,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Begin State 4 - Matching of CV and JD&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="714,93" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Begin State 4 - Matching of CV and JD&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1100,7 +1269,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet CandidateMatching and output it to cv_s4_DT&#xA;" DataTable="[cv_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,144" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="CandidateMatching" WorkbookPath="[resultFileName]">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet CandidateMatching and output it to cv_s4_DT&#xA;" DataTable="[cv_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,147" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="CandidateMatching" WorkbookPath="[resultFileName]">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
@@ -1112,7 +1281,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet JDMatching and output it to jd_s4_DT&#xA;" DataTable="[jd_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,144" sap2010:WorkflowViewState.IdRef="ReadRange_8" SheetName="JDMatching" WorkbookPath="[resultFileName]">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read from matchingResult.xlsx worksheet JDMatching and output it to jd_s4_DT&#xA;" DataTable="[jd_s4_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,147" sap2010:WorkflowViewState.IdRef="ReadRange_8" SheetName="JDMatching" WorkbookPath="[resultFileName]">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
@@ -1126,13 +1295,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Cycle through the jd_s4_DT Datatable" CurrentIndex="[index_jds4DT]" DataTable="[jd_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="714,3150" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Cycle through the jd_s4_DT Datatable" CurrentIndex="[index_jds4DT]" DataTable="[jd_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="714,3185" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="680,2999" sap2010:WorkflowViewState.IdRef="Sequence_88">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="680,3033" sap2010:WorkflowViewState.IdRef="Sequence_88">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="jdSkillsReq" />
                 <Variable x:TypeArguments="s:String[]" Name="jdSkillsReqCollection" />
@@ -1147,7 +1316,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:AddDataColumn x:TypeArguments="x:String" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="[CurrentRow(0).ToString]" DataTable="[cv_s4_DT]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12" MaxLength="999" Unique="False" />
-              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String then convert it into an Array" sap:VirtualizedContainerService.HintSize="638,367" sap2010:WorkflowViewState.IdRef="Sequence_99">
+              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String then convert it into an Array" sap:VirtualizedContainerService.HintSize="638,371" sap2010:WorkflowViewState.IdRef="Sequence_99">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1155,7 +1324,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_50">
+                <Assign sap2010:Annotation.AnnotationText="Retrieve the Education Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_50">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[jdEduReq]</OutArgument>
                   </Assign.To>
@@ -1182,7 +1351,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
               </Sequence>
-              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String&#xA;Convert the JD as String into an Array&#xA;Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="638,539" sap2010:WorkflowViewState.IdRef="Sequence_98">
+              <Sequence sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String&#xA;Convert the JD as String into an Array&#xA;Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="638,547" sap2010:WorkflowViewState.IdRef="Sequence_98">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1190,7 +1359,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_40">
+                <Assign sap2010:Annotation.AnnotationText="Retrieve the Skills Requirement from JD as String" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_40">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[jdSkillsReq]</OutArgument>
                   </Assign.To>
@@ -1216,7 +1385,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <Assign sap2010:Annotation.AnnotationText="Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_42">
+                <Assign sap2010:Annotation.AnnotationText="Count the number of item in the converted JD array" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_42">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[skillsJD_Total]</OutArgument>
                   </Assign.To>
@@ -1230,13 +1399,13 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
               </Sequence>
-              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Go through each CV and begin the matching process and recording into the datatable cv_s4_DT" CurrentIndex="[index_cvs4DT]" DataTable="[cv_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,1859" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+              <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Go through each CV and begin the matching process and recording into the datatable cv_s4_DT" CurrentIndex="[index_cvs4DT]" DataTable="[cv_s4_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,1881" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1708" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1729" sap2010:WorkflowViewState.IdRef="Sequence_89">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Double" Name="percentageMatch" />
                       </Sequence.Variables>
@@ -1245,13 +1414,13 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV education with JD education and result in either &quot;Met&quot; or &quot;Not Met&quot; in the eduResult variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,735" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[jdEduReqCollection]">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV education with JD education and result in either &quot;Met&quot; or &quot;Not Met&quot; in the eduResult variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,741" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[jdEduReqCollection]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="education" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,559" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,562" sap2010:WorkflowViewState.IdRef="Sequence_100">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="IsEduMet" />
                                 <Variable x:TypeArguments="x:String" Name="educationPattern" />
@@ -1270,7 +1439,7 @@
                                 </Assign.Value>
                               </Assign>
                               <ui:IsMatch BuilderPattern=".* bachelor|degree|diploma.*" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[CurrentRow(&quot;Education List&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;.* bachelor|degree|diploma.*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[educationPattern]" RegexOption="IgnoreCase" Result="[IsEduMet]" />
-                              <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[IsEduMet]" sap:VirtualizedContainerService.HintSize="484,268" sap2010:WorkflowViewState.IdRef="If_19">
+                              <If sap2010:Annotation.AnnotationText="Count the matches in the CV Skills List with the JDskillsreq" Condition="[IsEduMet]" sap:VirtualizedContainerService.HintSize="484,271" sap2010:WorkflowViewState.IdRef="If_19">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1300,7 +1469,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEach>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV skills with JD skills and count the number of matches into the skillsMatchCount variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,123" sap2010:WorkflowViewState.IdRef="ForEach`1_21" Values="[jdSkillsReqCollection]">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Match CV skills with JD skills and count the number of matches into the skillsMatchCount variable" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,128" sap2010:WorkflowViewState.IdRef="ForEach`1_21" Values="[jdSkillsReqCollection]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -1342,7 +1511,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEach>
-                      <Assign sap2010:Annotation.AnnotationText="Assign percentageMatch variable with the result of skillsMatchCount divided by skillsJD_Total&#xA;" sap:VirtualizedContainerService.HintSize="562,132" sap2010:WorkflowViewState.IdRef="Assign_49">
+                      <Assign sap2010:Annotation.AnnotationText="Assign percentageMatch variable with the result of skillsMatchCount divided by skillsJD_Total&#xA;" sap:VirtualizedContainerService.HintSize="562,136" sap2010:WorkflowViewState.IdRef="Assign_49">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Double">[percentageMatch]</OutArgument>
                         </Assign.To>
@@ -1355,7 +1524,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <Assign sap2010:Annotation.AnnotationText="Write the percentageMatch into the cv_s4_DT Datatable" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_46">
+                      <Assign sap2010:Annotation.AnnotationText="Write the percentageMatch into the cv_s4_DT Datatable" sap:VirtualizedContainerService.HintSize="562,104" sap2010:WorkflowViewState.IdRef="Assign_46">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[cv_s4_DT.Rows(index_cvs4DT).Item(index_jds4DT + 4)]</OutArgument>
                         </Assign.To>
@@ -1368,7 +1537,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Results for &quot; + CurrentRow(0).ToString + &quot;: &quot; + percentageMatch.ToString +&quot;% matched&quot; + vbNewLine + vbNewLine + &quot;Education :&quot; + eduResult.ToString]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="562,93" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Results for &quot; + CurrentRow(0).ToString + &quot;: &quot; + percentageMatch.ToString +&quot;% matched&quot; + vbNewLine + vbNewLine + &quot;Education :&quot; + eduResult.ToString]" />
                       <Assign sap2010:Annotation.AnnotationText="reset the variable to default value" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="Assign_53">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[eduResult]</OutArgument>
@@ -1382,7 +1551,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <Assign sap2010:Annotation.AnnotationText="reset the skillsMatchCount to 0 for the next JD entries" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_48">
+                      <Assign sap2010:Annotation.AnnotationText="reset the skillsMatchCount to 0 for the next JD entries" sap:VirtualizedContainerService.HintSize="562,104" sap2010:WorkflowViewState.IdRef="Assign_48">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[skillsMatchCount]</OutArgument>
                         </Assign.To>
@@ -1415,7 +1584,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="714,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Generating match results...&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="714,93" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Generating match results...&quot;]" />
       <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Write the Datatable back to matchingResult.xlsx" DataTable="[cv_s4_DT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="714,146" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="CandidateMatching" StartingCell="A1" WorkbookPath="[resultFileName]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
